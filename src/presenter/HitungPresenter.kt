@@ -13,11 +13,6 @@ class HitungPresenter ( private var view: HitungView) {
     ) {
         if (view.onSuccess()){
             val total  = s * (alas * tinggi)
-            /*model (penyedia data) digunakan untuk mengirim data ke view dengan bantuan interface*/
-            /*View akan menampilkan datannya dari model dengan bantuan interface*/
-            /*jadi interface yang menjembatani antara model dan view*/
-            /*jika ingin ke view dari model maka harus melalui presenternya(bisnis logic)*/
-
             /*meletakkan hasil logic presenter ke model*/
             val segitiga = Segitiga()
             segitiga.hasil = total
@@ -25,7 +20,7 @@ class HitungPresenter ( private var view: HitungView) {
              yang digunakan sebagai jembatan antara model dengan view agar hasilnya
              bisa ditambilkan di view*/
             /*jadi cukup bawa objekya saja untuk mengakses data hasil perhitungan yg sudah dihitung */
-            
+
             view.hasil(segitiga)
         } else if (view.onError()){
             println("Gagal melakukan proses perhitungan")
