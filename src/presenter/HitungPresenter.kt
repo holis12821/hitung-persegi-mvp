@@ -25,6 +25,7 @@ class HitungPresenter ( private var view: HitungView) {
              yang digunakan sebagai jembatan antara model dengan view agar hasilnya
              bisa ditambilkan di view*/
             /*jadi cukup bawa objekya saja untuk mengakses data hasil perhitungan yg sudah dihitung */
+            
             view.hasil(segitiga)
         } else if (view.onError()){
             println("Gagal melakukan proses perhitungan")
